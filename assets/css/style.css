@@ -71,6 +71,7 @@ table tr:nth-child(2){
 .main-body {
   width: 100%;
   padding: 15px;
+  min-width: 70%;
   border-radius: 15px;
   border: 2px solid var(--C-GREEN);
 }
@@ -125,7 +126,7 @@ table tr:nth-child(2){
 }
 .details .input-group input,
 .details .input-group select {
-  width: 100%;
+  width: -webkit-fill-available;
   margin-top: 10px;
 }
 .entry .form-btn {
@@ -195,4 +196,9 @@ table tr:nth-child(2){
   color: var(--C-WHITE);
   font-weight: var(--FW-BOLD);
   background-color: var(--C-GREEN);
+}
+.model .data {
+  overflow: hidden;
+  overflow-x: scroll;
+  padding: 15px 25px;
 }

@@ -50,10 +50,10 @@ const createSidebar = (data) => {
      const field = sidebarTable.querySelector('.field');
 
      data.forEach(data => {
-          const { id, code, department } = data;
+          const { code, department } = data;
           let newField = field.cloneNode(true);
 
-          newField.children[0].innerText = id;
+          newField.children[0].innerText = sidebarTable.childElementCount - 1;
           newField.children[1].innerText = code;
           newField.children[2].innerText = department;
 
@@ -87,7 +87,7 @@ const createModel = (code, item, stock, uom, rqQty, reason, rqDate, descrip) => 
                dataArray = data.data;
                const getData = dataArray.find(data => data.code === code);
 
-               newField.children[0].innerText = getData.id;
+               newField.children[0].innerText = modelTable.childElementCount - 2;
                newField.children[1].innerText = getData.company;
                newField.children[2].innerText = getData.department;
                newField.children[3].innerText = getData.warehouse;
@@ -121,13 +121,13 @@ const getData = () => {
 
 function fillForm(field) {
      const parentField = field.closest('.field');
-     const itemCode = parentField.children[0].innerText;
+     const itemCode = parentField.children[1].innerText;
 
      fetch('assets/js/data.json')
           .then(res => res.json())
           .then(data => {
                dataArray = data.data;
-               const getData = dataArray.find(data => data.id === itemCode);
+               const getData = dataArray.find(data => data.code === itemCode);
 
                form.setAttribute('name', getData.code);
                document.getElementById('input-company').value = getData.company;;
