@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "code": "DR-220DFNVQ101",
+      "company": "Corporate Common Services",
+      "department": "Customer Supports",
+      "warehouse": "Sylhet Warehouse",
+      "requisitionType": "Normal",
+      "requisitionDate": "2021-04-03",
+      "requestBy": "superadmin@gmail.com",
+      "btn": "Edit"
+    },
+    {
+      "id": "2",
+      "code": "DR-656ET4ERT",
+      "company": "Omni Solutions Ltd",
+      "department": "IT Supports",
+      "warehouse": "Dhaka Stock Exchanges",
+      "requisitionType": "Date Expired",
+      "requisitionDate": "2021-04-03",
+      "requestBy": "karim@gmail.com",
+      "btn": "Edit"
+    },
+    {
+      "id": "3",
+      "code": "DR-5FG45DG",
+      "company": "RFL Company Ltd",
+      "department": "Admin",
+      "warehouse": "Dhaka Dhanmondi Warehouse",
+      "requisitionType": "Incoming",
+      "requisitionDate": "2022-03-03",
+      "requestBy": "rahim@gmail.com",
+      "btn": "Edit"
+    },
+    {
+      "id": "4",
+      "code": "DEG-565W56E6R",
+      "company": "Bkash Limited",
+      "department": "Editor",
+      "warehouse": "Chittagong Port",
+      "requisitionType": "Normal",
+      "requisitionDate": "2022-04-09",
+      "requestBy": "bkash.info@gmail.com",
+      "btn": "Edit"
+    },
+    {
+      "id": "5",
+      "code": "DEG-565W56E5R",
+      "company": "Akij Cement",
+      "department": "HR Department",
+      "warehouse": "Chittagong Port",
+      "requisitionType": "Upcoming",
+      "requisitionDate": "2022-04-13",
+      "requestBy": "superadmin@gmail.com",
+      "btn": "Edit"
+    }
+  ]
+}

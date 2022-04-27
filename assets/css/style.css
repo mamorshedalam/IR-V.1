@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+:root {
+  --C-WHITE: #ffffff;
+  --C-ASH: #e9ecef;
+  --C-AQUA: #d7f5f1;
+  --C-GREEN: #1ab394;
+  --C-ORANGE: #e6810f;
+  --C-BLACK: #000000;
+  --FW-MED: 500;
+  --FW-BOLD: 700;
+}
+body {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+button {
+  cursor: pointer;
+  border-radius: 5px;
+  color: var(--C-GREEN);
+  background: transparent;
+  border: 2px solid var(--C-GREEN);
+}
+img {
+  width: 100%;
+}
+h2 {
+  font-weight: var(--FW-MED);
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table th,
+table td {
+  border: 1px solid var(--C-ASH);
+  padding: 5px;
+  text-align: center;
+}
+table tr:nth-child(2){
+  display: none;
+}
+.container {
+  width: 100%;
+}
+.main-wrapper {
+  display: flex;
+  width: 1120px;
+  max-width: 100%;
+  margin: 25px auto;
+}
+
+.sidebar {
+  width: 30%;
+  display: none;
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid var(--C-GREEN);
+}
+.sidebar h2 {
+  padding: 7px 0;
+  font-size: 16px;
+  text-align: center;
+  color: var(--C-WHITE);
+  background-color: var(--C-GREEN);
+}
+
+.main-body {
+  width: 100%;
+  padding: 15px;
+  border-radius: 15px;
+  border: 2px solid var(--C-GREEN);
+}
+.main-body .header button {
+  width: 44px;
+  padding: 10px;
+}
+.entry .company {
+  margin: 15px 0;
+  padding: 15px 25px;
+  border-radius: 5px;
+  background-color: var(--C-AQUA);
+}
+.company .input-group {
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px;
+}
+.company .input-group label {
+  width: 40%;
+}
+.company .input-group .input-field {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+.input-group .input-field span {
+  width: 20px;
+  padding: 5px 10px;
+  display: inline-block;
+  background-color: var(--C-ASH);
+}
+.input-group input,
+.input-group select {
+  padding: 7px 10px;
+  border-color: var(--C-ASH);
+}
+
+.entry .details {
+  display: flex;
+  padding: 15px 10px;
+  border-radius: 5px;
+  justify-content: space-between;
+  border: 2px solid var(--C-GREEN);
+}
+.entry .details .input-group {
+  width: 13%;
+  overflow: hidden;
+}
+.details .input-group label {
+  font-size: 12px;
+}
+.details .input-group input,
+.details .input-group select {
+  width: 100%;
+  margin-top: 10px;
+}
+.entry .form-btn {
+  margin: 10px 0;
+  text-align: right;
+}
+.entry .form-btn input {
+  border: none;
+  margin-left: 10px;
+  padding: 7px 10px;
+  border-radius: 3px;
+  color: var(--C-WHITE);
+}
+.entry .form-btn input[type="submit"] {
+  background-color: var(--C-GREEN);
+}
+.entry .form-btn input[type="reset"] {
+  background-color: var(--C-ORANGE);
+}
+.cart h2 {
+  padding: 10px 0;
+  border-radius: 5px;
+  text-align: center;
+  color: var(--C-WHITE);
+  background-color: var(--C-GREEN);
+}
+.cart table button {
+  color: var(--C-ORANGE);
+  border-color: var(--C-ORANGE);
+}
+.cart table + button {
+  margin-top: 15px;
+  padding: 7px 10px;
+  color: var(--C-WHITE);
+  background-color: var(--C-GREEN);
+}
+
+.model {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.model .container {
+  width: 60%;
+  border-radius: 10px;
+  background-color: var(--C-WHITE);
+}
+.model .header {
+  position: relative;
+  color: var(--C-GREEN);
+}
+.model .header h2{
+  padding: 10px;
+  margin: 0;
+}
+.model .header button{
+  top: -10px;
+  right: -10px;
+  position: absolute;
+  color: var(--C-WHITE);
+  font-weight: var(--FW-BOLD);
+  background-color: var(--C-GREEN);
+}

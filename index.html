@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Inventory Requisition</title>
+
+     <!-- CSS -->
+     <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+     <div class="main-wrapper">
+          <div id="sidebar" class="sidebar">
+               <div class="container">
+                    <h2>Requisition List</h2>
+                    <table id="sidebar-table">
+                         <tr>
+                              <th>Sl</th>
+                              <th>Code</th>
+                              <th>Department</th>
+                              <th>Action</th>
+                         </tr>
+                         <tr class="field">
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th><button onclick="fillForm(this)">Edit</button></th>
+                         </tr>
+                    </table>
+               </div>
+          </div>
+          <div class="main-body">
+               <div class="container">
+                    <section class="header">
+                         <button id="open-sidebar"  style="display: block"><img src="/assets/img/menu-bar.png" alt="">
+                         <button id="close-sidebar" style="display: none"><img src="/assets/img/close-bar.png" alt="">
+                         </section>
+                    <section class="entry">
+                         <form action="" id="input-form">
+                              <div class="company">
+                                   <div class="input-group">
+                                        <label for="input-company">Company :</label>
+                                        <div class="input-field"><span><img src="assets/img/beg.png" alt=""></span>
+                                             <select id="input-company" required>
+                                             </select>
+                                        </div>
+                                   </div>
+                                   <div class="input-group">
+                                        <label for="input-department">Department :</label>
+                                        <div class="input-field"><span><img src="assets/img/beg.png" alt=""></span>
+                                             <select id="input-department" required>
+                                             </select>
+                                        </div>
+                                   </div>
+                                   <div class="input-group">
+                                        <label for="input-store">Store/Warehouse :</label>
+                                        <div class="input-field"><span><img src="assets/img/beg.png" alt=""></span>
+                                             <select id="input-store" required>
+                                             </select>
+                                        </div>
+                                   </div>
+                                   <div class="input-group">
+                                        <label for="input-type">Requisition Type :</label>
+                                        <div class="input-field"><span><img src="assets/img/beg.png" alt=""></span>
+                                             <select id="input-type" required>
+                                             </select>
+                                        </div>
+                                   </div>
+                                   <div class="input-group">
+                                        <label for="input-date">Requisition Date :</label>
+                                        <div class="input-field">
+                                             <span><img src="assets/img/calender.png" alt=""></span>
+                                             <input id="input-date" type="date" required>
+                                        </div>
+                                   </div>
+                                   <div class="input-group">
+                                        <label for="input-request">Request By :</label>
+                                        <div class="input-field">
+                                             <span><img src="assets/img/person.png" alt=""></span>
+                                             <input id="input-request" type="text" required>
+                                        </div>
+                                   </div>
+                              </div>
+                              <h2>Details</h2>
+                              <div class="details">
+                                   <div class="input-group">
+                                        <label for="item">Item's Name</label>
+                                        <select id="item" required>
+                                             <option hidden>Select Items</option>
+                                             <option>RFL PP-R Pipe</option>
+                                             <option>PVC Floor Mat</option>
+                                             <option>RFL Thread Pipe</option>
+                                        </select>
+                                   </div>
+                                   <div class="input-group">
+                                        <label for="stock-qty">Stock Qty</label>
+                                        <input id="stock-qty" type="number">
+                                   </div>
+                                   <div class="input-group">
+                                        <label for="uom">UOM</label>
+                                        <select id="uom">
+                                             <option hidden>Select UOM</option>
+                                             <option>Unit of Measurement</option>
+                                             <option>Unit of Items</option>
+                                        </select>
+                                   </div>
+                                   <div class="input-group">
+                                        <label for="req-qty">Request Qty</label>
+                                        <input id="req-qty" type="number">
+                                   </div>
+                                   <div class="input-group">
+                                        <label for="reason">Reason</label>
+                                        <input id="reason" type="text">
+                                   </div>
+                                   <div class="input-group">
+                                        <label for="req-date">Required Date</label>
+                                        <input id="req-date" type="date">
+                                   </div>
+                                   <div class="input-group">
+                                        <label for="descrip">Description</label>
+                                        <input id="descrip" type="text">
+                                   </div>
+                              </div>
+                              <div class="form-btn">
+                                   <input type="submit" value="Add To Cart">
+                                   <input type="reset" value="Clear">
+                              </div>
+                         </form>
+                    </section>
+                    <section class="cart">
+                         <h2>Cart</h2>
+                         <table id="cart-table">
+                              <tr>
+                                   <th>Item Name</th>
+                                   <th>Request Qty</th>
+                                   <th>Reason</th>
+                                   <th>Required Date</th>
+                                   <th>Description</th>
+                                   <th>Action</th>
+                              </tr>
+                              <tr class="field">
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td><button onclick="deleteData(this)">Delete</button></td>
+                              </tr>
+                         </table>
+                         <button id="open-model">Submit For Approve</button>
+                    </section>
+               </div>
+          </div>
+          <div id="model" class="model">
+               <div class="container">
+                    <div class="header">
+                         <h2>Approve Details</h2>
+                         <button id="close-model">X</button>
+                    </div>
+                    <div class="data">
+                         <table id="model-table">
+                              <tr>
+                                   <th>Sl</th>
+                                   <th>Company</th>
+                                   <th>Department</th>
+                                   <th>Warehouse</th>
+                                   <th>Requisition Type</th>
+                                   <th>Requisition Date</th>
+                                   <th>Request By</th>
+                                   <th>Item Name</th>
+                                   <th>Stock Qty</th>
+                                   <th>UOM</th>
+                                   <th>Request Qty</th>
+                                   <th>Reason</th>
+                                   <th>Required Date</th>
+                                   <th>Description</th>
+                              </tr>
+                              <tr class="field">
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                              </tr>
+                         </table>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <script src="assets/js/app.js"></script>
+</body>
+
+</html>
