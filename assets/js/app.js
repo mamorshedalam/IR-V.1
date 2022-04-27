@@ -5,7 +5,7 @@ const closeModelBtn = document.getElementById('close-model');
 const model = document.getElementById('model');
 const form = document.getElementById('input-form');
 
-fetch('/assets/js/data.json')
+fetch('assets/js/data.json')
      .then(res => res.json())
      .then(data => {
           dataArray = data.data;
@@ -81,7 +81,7 @@ const createModel = (code, item, stock, uom, rqQty, reason, rqDate, descrip) => 
      let newField = field.cloneNode(true);
 
      newField.setAttribute('name', code);
-     fetch('/assets/js/data.json')
+     fetch('assets/js/data.json')
           .then(res => res.json())
           .then(data => {
                dataArray = data.data;
@@ -123,7 +123,7 @@ function fillForm(field) {
      const parentField = field.closest('.field');
      const itemCode = parentField.children[0].innerText;
 
-     fetch('/assets/js/data.json')
+     fetch('assets/js/data.json')
           .then(res => res.json())
           .then(data => {
                dataArray = data.data;
