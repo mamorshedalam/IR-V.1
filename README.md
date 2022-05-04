@@ -1,4 +1,4 @@
-## Inventory Requisition
+## Inventory Requisition Version.1
 IR is a inventory management made with Vanilla JavaScript
 
 #### Features:
@@ -15,5 +15,11 @@ IR is a inventory management made with Vanilla JavaScript
  - Javascript (ES6)
  - JSON Data
 
+#### Learning:
+
+ - Model create by JS
+ - Handle Form submition data
+ - JSON Data management by Fatch API
+ - Dynamic Form & Table create by JSON Data
 
 Live link : https://mamorshedalam.github.io/IR-V.1/
