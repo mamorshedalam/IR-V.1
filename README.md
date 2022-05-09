@@ -17,9 +17,9 @@ IR is a inventory management made with Vanilla JavaScript
 
 #### Learning:
 
- - Model create by JS
+ - Model creation by JS
  - Handle Form submission data
  - JSON Data management by Fetch API
- - Dynamic Form & Table create by JSON Data
+ - Dynamic Form & Table creation by JSON Data
 
 Live link : https://mamorshedalam.github.io/IR-V.1/
